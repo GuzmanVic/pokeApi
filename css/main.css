@@ -46,18 +46,25 @@ button {
 body {
     min-height: 100vh;
     background-color: var(--clr-gray);
+    background-color: #FF0000;
+    background-image: linear-gradient(#FF0000 95%, #FFD500);
+
+
 }
 
 header {
     padding-block: 1rem;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
     background-color: var(--clr-white);
+    background-color: #0000FF;
+    background-image: linear-gradient(#0000FF, #FF0000);
+
 }
 
 .nav {
     display: flex;
     flex-direction: column;
-    gap: 1rem; 
+    gap: 1rem;
     align-items: flex-start;
     padding-inline: 2rem;
     max-width: 1000px;
@@ -94,6 +101,7 @@ main {
     margin: 0 auto;
 }
 
+
 .pokemon {
     border-radius: 1rem;
     background-color: var(--clr-white);
@@ -103,6 +111,12 @@ main {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+}
+
+.pokemon-todos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .pokemon-id-back {
@@ -115,12 +129,19 @@ main {
     color: var(--clr-gray);
     z-index: -1;
 }
-.pokemon-imagen{
+
+.pokemon-imagen {
     padding-inline: 1rem;
     display: flex;
     justify-content: center;
 }
-.pokemon-info{
+
+.pokemon-imagen img {
+    width: 100%;
+    max-width: 6rem;
+}
+
+.pokemon-info {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -128,24 +149,28 @@ main {
     align-items: center;
     text-align: center;
 }
-.nombre-contenedor{
+
+.nombre-contenedor {
     display: flex;
     align-items: center;
     column-gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
-.pokemon-id{
+
+.pokemon-id {
     background-color: var(--clr-gray);
     padding: .25rem .5;
     border-radius: 100vmax;
     font-size: .75rem;
     font-weight: 500;
 }
-.pokemon-nombre{
+
+.pokemon-nombre {
     font-size: 1.4rem;
 }
-.pokemon-tipos{
+
+.pokemon-tipos {
     display: flex;
     gap: 0.5rem;
     font-size: .75rem;
@@ -153,41 +178,108 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
-.tipo{
+
+.tipo {
     padding: .25rem .5rem;
     border-radius: 100vmax;
 }
-.pokemon-stats{
+
+.pokemon-stats {
     display: flex;
     gap: 1rem;
     font-size: .85rem;
 }
-.stat{
+
+.stat {
     background-color: var(--clr-gray);
     border-radius: 100vmax;
     padding: .25rem .5rem;
 }
-.pokemon-todos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
+
 @media screen and (min-width:470px) {
-    .pokemon-todos{
+    .pokemon-todos {
         grid-template-columns: 1fr 1fr;
     }
-}@media screen and (min-width:700px) {
-    .pokemon-todos{
+}
+
+@media screen and (min-width:700px) {
+    .pokemon-todos {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-.pokemon-imagen img {
-    width: 100%;
-    max-width: 6rem;
-}
+
+
 
 
 /* Aquí todo el CSS extra */
+.generaciones {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #FFD500;
+}
+
+.generaciones button {
+    margin-right: .5rem;
+
+}
+
+.gen1 {
+    background: linear-gradient(to right, #abd03f 33.33%, #D95337 33.33%, #f04f24 66.67%, #f8f900 66.67%);
+}
+
+.gen2 {
+    background: linear-gradient(to right, #80dfff 33.33%, #c0c0c0 33.33%, #c0c0c0 66.67%, #ffbf41 66.67%);
+}
+
+.gen3 {
+    background: linear-gradient(to right, #b4323e 33.33%, #449b35 33.33%, #449b35 66.67%, #396eaa 66.67%);
+}
+
+.gen4 {
+    background: linear-gradient(to right, #4E5987 33.33%, #85A8C2 33.33%, #85A8C2 66.67%, #6B7394 66.67%);
+}
+
+.gen5 {
+    background: linear-gradient(to right, white 50%, black 50%);
+    /* Colores divididos */
+    background-size: 200% 100%;
+    /* Tamaño del degradado */
+    transition: background 0.5s ease;
+    /* Transición suave del color de fondo */
+}
+
+.gen6 {
+    background: linear-gradient(to right, #1E73B7 50%, #C65C85 50%);
+    /* Colores divididos */
+}
+
+.gen7 {
+    background: linear-gradient(to right, #E74C3C 50%, #3498DB 50%);
+    /* Colores divididos */
+}
+
+.gen8 {
+    background: linear-gradient(to right, #219ed8 50%, #c61f26 50%);
+    /* Colores divididos */
+}
+
+.gen9 {
+    background: linear-gradient(to right, #bd2a3a 50%, #bc49b3 50%);
+    /* Colores divididos */
+}
+
+.gen5 {
+    background-position: left bottom;
+}
+
+.gen5:hover {
+    background-position: -100% 0;
+    /* Cambia la posición del degradado al 100% para revelar el otro color */
+    color: white;
+}
 
 
 

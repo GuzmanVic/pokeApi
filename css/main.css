@@ -57,12 +57,13 @@ header {
 .nav {
     display: flex;
     flex-direction: column;
-    gap: 1erm;
+    gap: 1rem; 
     align-items: flex-start;
     padding-inline: 2rem;
     max-width: 1000px;
     margin: 0 auto;
 }
+
 
 .nav-list {
     display: flex;
@@ -180,10 +181,11 @@ main {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-pokemon-imagen img {
+.pokemon-imagen img {
     width: 100%;
     max-width: 6rem;
 }
+
 
 /* Aquí todo el CSS extra */
 

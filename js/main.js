@@ -72,7 +72,7 @@ function mostrarPokemon(poke) {
     <p class="pokemon-id-back">#${poke.id}</p>
     <div class="pokemon-imagen">
         <img src="${poke.sprites.other["official-artwork"].front_default}"
-            alt="pikachu">
+            alt="${poke.name}">
     </div>
     <div class="pokemon-info">
         <div class="nombre-contenedor">
